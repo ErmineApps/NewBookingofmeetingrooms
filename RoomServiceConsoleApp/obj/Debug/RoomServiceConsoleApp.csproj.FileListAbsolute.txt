@@ -1,0 +1,14 @@
+C:\Users\kondratkov\source\repos\NewBookingofmeetingrooms\RoomServiceConsoleApp\bin\Debug\RoomServiceConsoleApp.exe.config
+C:\Users\kondratkov\source\repos\NewBookingofmeetingrooms\RoomServiceConsoleApp\bin\Debug\RoomServiceConsoleApp.exe
+C:\Users\kondratkov\source\repos\NewBookingofmeetingrooms\RoomServiceConsoleApp\bin\Debug\RoomServiceConsoleApp.pdb
+C:\Users\kondratkov\source\repos\NewBookingofmeetingrooms\RoomServiceConsoleApp\bin\Debug\EntityFramework.dll
+C:\Users\kondratkov\source\repos\NewBookingofmeetingrooms\RoomServiceConsoleApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kondratkov\source\repos\NewBookingofmeetingrooms\RoomServiceConsoleApp\bin\Debug\RoomService.dll
+C:\Users\kondratkov\source\repos\NewBookingofmeetingrooms\RoomServiceConsoleApp\bin\Debug\RoomService.pdb
+C:\Users\kondratkov\source\repos\NewBookingofmeetingrooms\RoomServiceConsoleApp\bin\Debug\RoomService.dll.config
+C:\Users\kondratkov\source\repos\NewBookingofmeetingrooms\RoomServiceConsoleApp\bin\Debug\EntityFramework.xml
+C:\Users\kondratkov\source\repos\NewBookingofmeetingrooms\RoomServiceConsoleApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kondratkov\source\repos\NewBookingofmeetingrooms\RoomServiceConsoleApp\obj\Debug\RoomServiceConsoleApp.csprojResolveAssemblyReference.cache
+C:\Users\kondratkov\source\repos\NewBookingofmeetingrooms\RoomServiceConsoleApp\obj\Debug\RoomServiceConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\kondratkov\source\repos\NewBookingofmeetingrooms\RoomServiceConsoleApp\obj\Debug\RoomServiceConsoleApp.exe
+C:\Users\kondratkov\source\repos\NewBookingofmeetingrooms\RoomServiceConsoleApp\obj\Debug\RoomServiceConsoleApp.pdb

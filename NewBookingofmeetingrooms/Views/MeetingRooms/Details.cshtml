@@ -1,0 +1,74 @@
+﻿@model NewBookingofmeetingrooms.MeetingRooms
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MeetingRooms</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberChair)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberChair)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Projector)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Projector)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Blackboard)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Blackboard)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FreedomStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FreedomStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateReserv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateReserv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Info)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Info)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

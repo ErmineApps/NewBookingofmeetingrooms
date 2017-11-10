@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище BookingOfMeetingRoomsDBModelContainer" CdmEntityContainer="BookingOfMeetingRoomsDBEntities">
+    <EntitySetMapping Name="MeetingRooms">
+      <EntityTypeMapping TypeName="BookingOfMeetingRoomsDBModel.MeetingRooms">
+        <MappingFragment StoreEntitySet="MeetingRooms">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NumberChair" ColumnName="NumberChair" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Projector" ColumnName="Projector" />
+          <ScalarProperty Name="Blackboard" ColumnName="Blackboard" />
+          <ScalarProperty Name="FreedomStatus" ColumnName="FreedomStatus" />
+          <ScalarProperty Name="DateReserv" ColumnName="DateReserv" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reservations">
+      <EntityTypeMapping TypeName="BookingOfMeetingRoomsDBModel.Reservations">
+        <MappingFragment StoreEntitySet="Reservations">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+          <ScalarProperty Name="DateFinish" ColumnName="DateFinish" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="MeetingRoom_Id" ColumnName="MeetingRoom_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="BookingOfMeetingRoomsDBModel.Services">
+        <MappingFragment StoreEntitySet="Services">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="Reservation_Id" ColumnName="Reservation_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="BookingOfMeetingRoomsDBModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
