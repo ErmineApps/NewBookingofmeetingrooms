@@ -19,11 +19,11 @@
       <EntityTypeMapping TypeName="BookingOfMeetingRoomsDBModel.Reservations">
         <MappingFragment StoreEntitySet="Reservations">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="User" ColumnName="User" />
           <ScalarProperty Name="DateStart" ColumnName="DateStart" />
           <ScalarProperty Name="DateFinish" ColumnName="DateFinish" />
           <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="MeetingRoom_Id" ColumnName="MeetingRoom_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

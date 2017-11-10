@@ -58,7 +58,7 @@ namespace RoomService
 
                     foreach (var meetingRoom in meetingRooms)
                     {
-                        var reservations = db.Reservations.Where(p => (DateTime)p.DateStart > timeNow && (DateTime)p.DateStart < timeNowPlus && (int)p.MeetingRoom_Id == meetingRoom.Id)
+                        var reservations = db.Reservations.Where(p => (((DateTime)p.DateStart > timeNow && (DateTime)p.DateStart < timeNowPlus) || ((DateTime)p.DateStart < timeNow && (DateTime)p.DateFinish > timeNow)) && (int)p.MeetingRoom_Id == meetingRoom.Id).OrderBy(p=>p.DateStart)
                             .ToList();
 
                         // свободна!

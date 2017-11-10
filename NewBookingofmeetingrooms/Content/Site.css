@@ -22,3 +22,9 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.btn {
+    border: 1px solid black;
+    border-radius: 5px;
+    background: gainsboro;
+}

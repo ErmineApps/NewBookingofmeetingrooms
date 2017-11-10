@@ -15,8 +15,8 @@ namespace RoomService
     public partial class Services
     {
         public int Id { get; set; }
-        public Nullable<int> IdUser { get; set; }
-        public Nullable<int> Reservation_Id { get; set; }
+        public int IdUser { get; set; }
+        public int Reservation_Id { get; set; }
     
         public virtual Reservations Reservations { get; set; }
     }
