@@ -16,29 +16,15 @@ namespace NewBookingofmeetingrooms.ControllersApi
     {
         private BookingOfMeetingRoomsDBEntities db = new BookingOfMeetingRoomsDBEntities();
 
-        // GET: api/Reservations
-        public IQueryable<Reservations> GetReservations()
-        {
-            return db.Reservations;
-        }
-
-        // GET: api/Reservations/5
+        // GET: api/Reservations/GetReservationsForMeetingRoom/5
         [ResponseType(typeof(Reservations))]
-        public IHttpActionResult GetReservations(int id)
+        public IQueryable<Reservations> GetReservationsForMeetingRoom(int id)
         {
-            Reservations reservations = db.Reservations.Find(id);
-            if (reservations == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(reservations);
+            var timeNow = DateTime.Now;
+            return db.Reservations.Where(p=>p.MeetingRoom_Id==id && p.Status == true && p.DateFinish > timeNow);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="reservations"></param>
+
         /// <returns></returns>
         // POST: api/Reservations/AddReservations
         [ResponseType(typeof(Reservations))]
@@ -57,61 +43,6 @@ namespace NewBookingofmeetingrooms.ControllersApi
             return CreatedAtRoute("DefaultApi", new { id = reservations.Id }, reservations);
         }
 
-
-
-
-        // PUT: api/Reservations/5
-        [ResponseType(typeof(void))]
-        public IHttpActionResult PutReservations(int id, Reservations reservations)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != reservations.Id)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(reservations).State = EntityState.Modified;
-
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ReservationsExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return StatusCode(HttpStatusCode.NoContent);
-        }
-
-        
-
-        // DELETE: api/Reservations/5
-        [ResponseType(typeof(Reservations))]
-        public IHttpActionResult DeleteReservations(int id)
-        {
-            Reservations reservations = db.Reservations.Find(id);
-            if (reservations == null)
-            {
-                return NotFound();
-            }
-
-            db.Reservations.Remove(reservations);
-            db.SaveChanges();
-
-            return Ok(reservations);
-        }
 
         protected override void Dispose(bool disposing)
         {

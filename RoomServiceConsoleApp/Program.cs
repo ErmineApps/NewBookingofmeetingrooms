@@ -21,24 +21,5 @@ namespace RoomServiceConsoleApp
             Console.WriteLine("Press ENTER for exit...");
             Console.ReadLine();
         }
-
-        static string checkIp()
-        {
-            StreamReader reader;
-            HttpWebRequest httpWebRequest;
-            HttpWebResponse httpWebResponse;
-
-            try
-            {
-                httpWebRequest = (HttpWebRequest)HttpWebRequest.Create("http://checkip.dyndns.org");
-                httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-                reader = new StreamReader(httpWebResponse.GetResponseStream());
-                return System.Text.RegularExpressions.Regex.Match(reader.ReadToEnd(), @"(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})").Groups[1].Value;
-            }
-            catch
-            {
-                return "error";
-            }
-        }
     }
 }

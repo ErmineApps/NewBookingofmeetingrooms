@@ -26,5 +26,19 @@ textarea {
 .btn {
     border: 1px solid black;
     border-radius: 5px;
-    background: gainsboro;
+    background: #fc0;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.leftround {
+    border-radius: 5px 0 0 5px;
+}
+
+.noround {
+    border-radius: 0;
+}
+
+.rightround {
+    border-radius: 0 5px 5px 0;
 }

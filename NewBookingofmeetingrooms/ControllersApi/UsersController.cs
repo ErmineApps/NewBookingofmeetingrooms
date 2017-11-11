@@ -18,25 +18,6 @@ namespace NewBookingofmeetingrooms.ControllersApi
         
         private BookingOfMeetingRoomsDBEntities db = new BookingOfMeetingRoomsDBEntities();
 
-        // GET: api/Users
-        public IQueryable<Users> GetUsers()
-        {
-            return db.Users;
-        }
-//
-//        // GET: api/Users/5
-//        [ResponseType(typeof(Users))]
-//        public IHttpActionResult GetUsers(int id)
-//        {
-//            Users users = db.Users.Find(id);
-//            if (users == null)
-//            {
-//                return NotFound();
-//            }
-//
-//            return Ok(users);
-//        }
-
         // POST: api/Users/Authentication
         [ResponseType(typeof(Users))]
         public IHttpActionResult Authentication(Users users)
