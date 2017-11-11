@@ -22,14 +22,14 @@ namespace NewBookingofmeetingrooms.ControllersApi
         [ResponseType(typeof(Users))]
         public IHttpActionResult Authentication(Users users)
         {
-            var userbase = db.Users.Where(p => p.UserName == users.UserName & p.Password == users.Password);
+            var userbase = db.Users.Where(p => p.UserName.Equals(users.UserName) && p.Password.Equals(users.Password));
 
-            if (userbase == null)
+            if (userbase.ToList().Count == 0)
             {
                 return NotFound();
             }
 
-            return Ok(userbase);
+            return CreatedAtRoute("DefaultApi", new { id = users.Id }, users);
         }
 
         // POST: api/Users/Registration
